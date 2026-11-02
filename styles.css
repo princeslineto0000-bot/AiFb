@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light;
+  --ink: #202443;
+  --muted: #858ba5;
+  --purple: #6c63e8;
+  --purple-dark: #554bd1;
+  --line: #eceefa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 24px;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 50% 5%, #ecebff 0, #f6f7ff 38%, #fbfcff 75%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.page-shell { width: min(100%, 760px); margin: 0 auto; }
+
+.topbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(111, 113, 167, .12);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font: 800 20px 'Plus Jakarta Sans', sans-serif;
+  text-decoration: none;
+  letter-spacing: -.7px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(145deg, #8b80ff, #5b50db);
+  box-shadow: 0 5px 13px #756bea55;
+}
+
+.brand-accent { color: var(--purple); }
+.topbar-label { display: flex; align-items: center; gap: 8px; color: #747a96; font-size: 13px; }
+.online-dot, .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #51c99a; }
+
+.hero { padding: 54px 0 31px; text-align: center; }
+.eyebrow { color: var(--purple); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; }
+.eyebrow span { margin-right: 5px; font-size: 15px; }
+
+h1, h2, p { margin-top: 0; }
+h1 {
+  margin: 15px 0 12px;
+  font: 800 clamp(34px, 7vw, 48px)/1.2 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -2.2px;
+}
+h1 span { color: var(--purple); }
+.hero-copy { margin: 0; color: #7f849e; font-size: 15px; line-height: 1.7; }
+
+.feedback-card {
+  overflow: hidden;
+  border: 1px solid rgba(225, 227, 244, .9);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 22px 65px rgba(69, 68, 133, .10), 0 3px 10px rgba(45, 49, 87, .03);
+}
+
+.card-heading { min-height: 88px; display: flex; align-items: center; gap: 14px; padding: 20px 28px; border-bottom: 1px solid var(--line); }
+.heading-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: #f0efff; font-size: 21px; }
+.card-heading h2, .feedback-heading h2 { margin: 0; font: 700 16px 'Plus Jakarta Sans', sans-serif; }
+.card-heading p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.language-tag { margin-left: auto; padding: 7px 10px; border: 1px solid #eeedfb; border-radius: 20px; color: #8984c7; background: #faf9ff; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+
+.record-area { padding: 25px 28px 23px; text-align: center; }
+.sound-wave { height: 35px; display: flex; align-items: center; justify-content: center; gap: 4px; margin-bottom: 18px; }
+.sound-wave span { width: 4px; height: 9px; border-radius: 5px; background: #d9d7fb; }
+.sound-wave span:nth-child(3n) { height: 17px; }
+.sound-wave span:nth-child(4n) { height: 25px; }
+.sound-wave span:nth-child(5n) { height: 13px; }
+
+.record-button {
+  min-width: 210px;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 23px;
+  border: 0;
+  border-radius: 14px;
+  color: white;
+  background: linear-gradient(135deg, #8177f5, #6256dc);
+  box-shadow: 0 8px 17px rgba(102, 91, 222, .27);
+  font: 700 14px 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.record-button:hover { transform: translateY(-2px); box-shadow: 0 11px 22px rgba(102, 91, 222, .32); }
+.record-button:focus-visible { outline: 3px solid #b9b4ff; outline-offset: 3px; }
+.mic-icon { font-size: 17px; }
+.record-status { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 15px 0 0; color: #777d98; font-size: 12px; }
+.status-dot { width: 7px; height: 7px; }
+.privacy-note { margin: 15px 0 0; color: #a0a4b6; font-size: 11px; }
+.privacy-note span { margin-right: 4px; }
+
+.feedback-panel { margin: 0 28px 28px; overflow: hidden; border: 1px solid #eae9fa; border-radius: 15px; background: #fbfaff; }
+.feedback-heading { height: 55px; display: flex; align-items: center; justify-content: space-between; padding: 0 17px; border-bottom: 1px solid #eeedfa; }
+.feedback-title { display: flex; align-items: center; gap: 9px; }
+.feedback-heading h2 { font-size: 14px; }
+.sparkle-icon { color: var(--purple); font-size: 18px; }
+.feedback-actions { display: flex; align-items: center; gap: 10px; }
+.speak-button { padding: 7px 10px; border: 1px solid #e7e5fb; border-radius: 8px; color: #6258cc; background: white; font: 600 11px 'DM Sans', sans-serif; cursor: pointer; }
+.speak-button:hover { background: #f3f1ff; }
+.speak-button:focus-visible { outline: 3px solid #b9b4ff; outline-offset: 2px; }
+.ai-badge { padding: 4px 8px; border-radius: 6px; color: #665cda; background: #eeecff; font-size: 10px; font-weight: 800; letter-spacing: .5px; }
+.feedback-content { min-height: 102px; display: flex; align-items: center; gap: 12px; padding: 19px 17px; color: #777d98; font-size: 13px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.feedback-content p { margin: 0; }
+.result-section { width: 100%; padding: 11px 13px; border: 1px solid #eeedfa; border-radius: 10px; background: #fff; }
+.result-section h3 { margin: 0 0 5px; color: #6258cc; font: 700 12px 'Plus Jakarta Sans', sans-serif; }
+.result-section p { color: #555b78; }
+.feedback-placeholder-icon { width: 34px; height: 34px; flex: 0 0 34px; display: grid; place-items: center; border-radius: 10px; background: white; font-size: 16px; }
+
+footer { padding: 24px 0 34px; color: #999db1; text-align: center; font-size: 12px; }
+
+@media (max-width: 520px) {
+  body { padding: 0 16px; }
+  .topbar { height: 70px; }
+  .topbar-label { font-size: 11px; }
+  .hero { padding: 42px 0 25px; }
+  .hero-copy { max-width: 340px; margin: auto; font-size: 14px; }
+  .card-heading { padding: 17px; }
+  .record-area { padding: 23px 16px; }
+  .feedback-panel { margin: 0 15px 18px; }
+  .language-tag { font-size: 8px; }
+}

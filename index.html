@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7ff">
+  <title>Luyện nói tiếng Anh cùng AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="AI Feedback trang chủ">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Speak<span class="brand-accent">AI</span></span>
+      </a>
+      <span class="topbar-label"><span class="online-dot"></span> Trợ lý luyện nói tiếng Anh</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span>✧</span> LUYỆN NÓI TIẾNG ANH CÙNG AI</div>
+      <h1 id="page-title">Luyện nói tự tin,<br><span>tiến bộ mỗi ngày.</span></h1>
+      <p class="hero-copy">Ghi âm câu trả lời bằng tiếng Anh để xem bản chép lời, câu gợi ý tự nhiên hơn và nhận xét hữu ích.</p>
+    </section>
+
+    <section class="feedback-card" aria-label="Ghi âm và nhận AI Feedback">
+      <div class="card-heading">
+        <div class="heading-icon" aria-hidden="true">🎙️</div>
+        <div>
+          <h2>Bài luyện nói</h2>
+          <p>Ghi âm câu trả lời của bạn</p>
+        </div>
+        <span class="language-tag">TIẾNG NÓI</span>
+      </div>
+
+      <div class="record-area">
+        <div class="sound-wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <button id="recordBtn" class="record-button" onclick="toggleRecording()">
+          <span class="mic-icon" aria-hidden="true">🎤</span>
+          <span>Bắt đầu ghi âm</span>
+        </button>
+        <p id="status" class="record-status" aria-live="polite"><span class="status-dot"></span> Trạng thái: Sẵn sàng</p>
+        <p class="privacy-note"><span aria-hidden="true">🔒</span> Âm thanh của bạn sẽ được gửi để phân tích sau khi dừng ghi âm.</p>
+      </div>
+
+      <div class="feedback-panel">
+        <div class="feedback-heading">
+          <div class="feedback-title"><span class="sparkle-icon" aria-hidden="true">✦</span><h2>AI Feedback</h2></div>
+          <div class="feedback-actions">
+            <button id="speakBtn" class="speak-button" type="button" onclick="speakFeedback()" aria-label="Đọc phản hồi thành tiếng">🔊 Đọc phản hồi</button>
+            <span class="ai-badge">AI</span>
+          </div>
+        </div>
+        <div id="aiFeedback" class="feedback-content" aria-live="polite">
+          <span class="feedback-placeholder-icon" aria-hidden="true">💬</span>
+          <p>Ghi âm câu trả lời để nhận bản chép lời và gợi ý chỉnh sửa.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>Hãy luyện tập thoải mái — tiến bộ bắt đầu từ mỗi lần bạn cất lời.</footer>
+  </main>
+</body>
+</html>
